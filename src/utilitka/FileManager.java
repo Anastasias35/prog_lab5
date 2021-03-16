@@ -65,7 +65,6 @@ public class FileManager {
              if (!file.canRead()) throw new CanNotReadException();
              //   LinkedHashSet<Worker> workerCollection;
              Type collectionType = new TypeToken<LinkedHashSet<Worker>>() {}.getType();
-             System.out.println("asdfg");
              LinkedHashSet<Worker> workerCollection = gson.fromJson(collectionFileScanner.nextLine().trim(), collectionType);
              System.out.println("Коллекция успешна загружена!");
              return workerCollection;

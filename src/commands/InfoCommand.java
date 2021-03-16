@@ -22,7 +22,7 @@ public class InfoCommand extends AbstractCommand {
     public boolean execute(String argument) {
         try{
             if(!argument.isEmpty()) throw new IncorrectArgumentException();
-            System.out.println("Инофрмация о коллекции");
+            System.out.println("Информация о коллекции");
             System.out.println("Тип" + collectionManager.getClass().getName());
             if(collectionManager.getLastIntTime()==null ) {
                 System.out.println("Коллекция не инициализирована");

@@ -40,6 +40,10 @@ public class Console {
         }while(commandStatus!=2);
     }
 
+    /**
+     * Выполнение скрипта
+     * @param file
+     */
     public void actScript(String file){
          String[] userCommand1={"",""};
          scriptName.add(file);
@@ -53,10 +57,9 @@ public class Console {
              creator.setScanner(scanner1);
                  do {
                      userCommand1 = (scanner1.nextLine().trim() + " ").split(" ", 2);
-                     System.out.println("Выполняется команда" + userCommand1[0]);
+                     System.out.println("Выполняется команда " + userCommand1[0]);
                      userCommand1[1]=userCommand1[1].trim();
                      if (userCommand1[0].equals("execute_script")) {
-                        // System.out.println("govno 1"); заходит
                          for (String name : scriptName) {
                              if (userCommand1[1].equals(name)) {
                                  throw new RecursionException();

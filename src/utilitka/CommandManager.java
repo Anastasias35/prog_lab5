@@ -38,7 +38,7 @@ public class CommandManager {
                           AbstractCommand saveCommand,AbstractCommand addCommand,AbstractCommand removeByIdCommand, AbstractCommand printFieldAscendingSalaryCommand,
                           AbstractCommand countLessThanPositionCommand, AbstractCommand updateCommand, AbstractCommand addIfMaxCommand, AbstractCommand addIfMinCommand,
                           AbstractCommand removeLowerCommand, AbstractCommand printDescendingCommand,AbstractCommand executeScriptCommand ){
-                          //AbstractCommand executeScriptCommand
+
 
         this.helpCommand=helpCommand;
         this.infoCommand=infoCommand;
@@ -226,6 +226,11 @@ public class CommandManager {
         return printDescendingCommand.execute(argument);
     }
 
+    /**
+     * Запускает команду считывание и исполнения скрипта из указанного файла
+     * @param argument
+     * @return состояние работы программы
+     */
     public boolean executeScript(String argument){
         return executeScriptCommand.execute(argument);
 

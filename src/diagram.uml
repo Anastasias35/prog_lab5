@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="577.0" y="1485.0">data.Worker</node>
+    <node x="889.0" y="1263.0">commands.RemoveByIdCommand</node>
+    <node x="1814.0" y="1485.0">utilitka.FileManager</node>
+    <node x="0.0" y="0.0">utilitka.CommandManager</node>
+    <node x="3098.0" y="1252.0">commands.AddIfMaxCommand</node>
+    <node x="536.0" y="1252.0">commands.RemoveLowerCommand</node>
+    <node x="0.0" y="1274.0">commands.SaveCommand</node>
+    <node x="317.0" y="1485.0">utilitka.Creator</node>
+    <node x="1178.0" y="1485.0">utilitka.Console</node>
+    <node x="3813.0" y="1485.0">exceptions.CanNotWriteException</node>
+    <node x="2383.0" y="827.0">interfaces.Command</node>
+    <node x="3211.0" y="1485.0">exceptions.IncorrectVariableException</node>
+    <node x="0.0" y="2005.0">exceptions.EmptyCollection</node>
+    <node x="268.0" y="1274.0">commands.ShowCommand</node>
+    <node x="3729.0" y="1285.0">commands.ExecuteScriptCommand</node>
+    <node x="1519.0" y="1485.0">data.Person</node>
+    <node x="2770.0" y="1252.0">commands.AddIfMinCommand</node>
+    <node x="1878.0" y="1296.0">commands.InfoCommand</node>
+    <node x="3512.0" y="1485.0">exceptions.IncorrectArgumentException</node>
+    <node x="3957.0" y="1285.0">commands.ExitCommand</node>
+    <node x="4311.0" y="1485.0">exceptions.RecursionException</node>
+    <node x="2151.0" y="1485.0">data.Position</node>
+    <node x="0.0" y="1485.0">utilitka.CollectionManager</node>
+    <node x="2146.0" y="1263.0">commands.CountLessThanPositionCommand</node>
+    <node x="2502.0" y="1274.0">commands.ClearCommand</node>
+    <node x="1189.0" y="1274.0">commands.PrintFieldAscendingSalaryCommand</node>
+    <node x="4151.0" y="1307.5">commands.HelpCommand</node>
+    <node x="2356.0" y="976.0">commands.AbstractCommand</node>
+    <node x="4066.0" y="1485.0">exceptions.CanNotReadException</node>
+    <node x="2801.0" y="1485.0">data.Country</node>
+    <node x="2370.0" y="1485.0">data.Color</node>
+    <node x="2575.0" y="1485.0">data.Coordinates</node>
+    <node x="3428.0" y="1263.0">commands.AddCommand</node>
+    <node x="3019.0" y="1485.0">Main</node>
+    <node x="4345.0" y="1252.0">commands.UpdateCommand</node>
+    <node x="1558.0" y="1274.0">commands.PrintDescendingCommand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="commands.InfoCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-50.0" />
+      <point x="2002.0" y="1222.0" />
+      <point x="2448.625" y="1222.0" />
+      <point x="-21.375" y="83.0" />
+    </edge>
+    <edge source="commands.ShowCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-72.0" />
+      <point x="392.0" y="1172.0" />
+      <point x="2377.375" y="1172.0" />
+      <point x="-92.625" y="83.0" />
+    </edge>
+    <edge source="commands.AddCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-83.0" />
+      <point x="3568.5" y="1202.0" />
+      <point x="2519.875" y="1202.0" />
+      <point x="49.875" y="83.0" />
+    </edge>
+    <edge source="commands.ExitCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-61.0" />
+      <point x="4044.0" y="1182.0" />
+      <point x="2548.375" y="1182.0" />
+      <point x="78.375" y="83.0" />
+    </edge>
+    <edge source="commands.HelpCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-38.5" />
+      <point x="4238.0" y="1172.0" />
+      <point x="2562.625" y="1172.0" />
+      <point x="92.625" y="83.0" />
+    </edge>
+    <edge source="commands.AbstractCommand" target="interfaces.Command">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="commands.PrintDescendingCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-72.0" />
+      <point x="1708.0" y="1212.0" />
+      <point x="2434.375" y="1212.0" />
+      <point x="-35.625" y="83.0" />
+    </edge>
+    <edge source="commands.SaveCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-72.0" />
+      <point x="124.0" y="1162.0" />
+      <point x="2363.125" y="1162.0" />
+      <point x="-106.875" y="83.0" />
+    </edge>
+    <edge source="commands.AddIfMinCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-94.0" />
+      <point x="2924.0" y="1222.0" />
+      <point x="2491.375" y="1222.0" />
+      <point x="21.375" y="83.0" />
+    </edge>
+    <edge source="commands.PrintFieldAscendingSalaryCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-72.0" />
+      <point x="1363.5" y="1202.0" />
+      <point x="2420.125" y="1202.0" />
+      <point x="-49.875" y="83.0" />
+    </edge>
+    <edge source="commands.ClearCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-72.0" />
+      <point x="2626.0" y="1232.0" />
+      <point x="2477.125" y="1232.0" />
+      <point x="7.125" y="83.0" />
+    </edge>
+    <edge source="commands.UpdateCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-94.0" />
+      <point x="4493.5" y="1162.0" />
+      <point x="2576.875" y="1162.0" />
+      <point x="106.875" y="83.0" />
+    </edge>
+    <edge source="commands.AddIfMaxCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-94.0" />
+      <point x="3253.0" y="1212.0" />
+      <point x="2505.625" y="1212.0" />
+      <point x="35.625" y="83.0" />
+    </edge>
+    <edge source="commands.ExecuteScriptCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-61.0" />
+      <point x="3833.0" y="1192.0" />
+      <point x="2534.125" y="1192.0" />
+      <point x="64.125" y="83.0" />
+    </edge>
+    <edge source="commands.CountLessThanPositionCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-83.0" />
+      <point x="2314.0" y="1232.0" />
+      <point x="2462.875" y="1232.0" />
+      <point x="-7.125" y="83.0" />
+    </edge>
+    <edge source="commands.RemoveByIdCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-83.0" />
+      <point x="1029.0" y="1192.0" />
+      <point x="2405.875" y="1192.0" />
+      <point x="-64.125" y="83.0" />
+    </edge>
+    <edge source="commands.RemoveLowerCommand" target="commands.AbstractCommand">
+      <point x="0.0" y="-94.0" />
+      <point x="702.5" y="1182.0" />
+      <point x="2391.625" y="1182.0" />
+      <point x="-78.375" y="83.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4" x="2088.0" y="1319.666666666666" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -22,6 +22,11 @@ public class RemoveLowerCommand extends AbstractCommand {
         this.creator=creator;
     }
 
+    /**
+     * Выполнение команды
+     * @param argument
+     * @return состояние выполнения команды
+     */
     @Override
     public boolean execute(String argument) {
         try{
@@ -40,10 +45,10 @@ public class RemoveLowerCommand extends AbstractCommand {
             collectionManager.deleteIfLower(worker.getSalary());
             return true;
         }catch (IncorrectArgumentException exception){
-            System.err.println("Команда " + getName() + " не имеет параметров ");
+            System.out.println("Команда " + getName() + " не имеет параметров ");
             return false;
         }catch (EmptyCollection exception){
-            System.err.println("Коллекция пуста");
+            System.out.println("Коллекция пуста");
             return false;
         }
     }

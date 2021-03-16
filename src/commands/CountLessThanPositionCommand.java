@@ -45,13 +45,13 @@ public class CountLessThanPositionCommand extends AbstractCommand{
             System.out.println(collectionManager.filterByPosition(argument1));
             return true;
         }catch (IncorrectArgumentException exception) {
-            System.err.println("Команда " + getName() + " должна иметь параметр Position");
+            System.out.println("Команда " + getName() + " должна иметь параметр Position");
             return false;
         }catch (IncorrectVariableException exception){
-                System.err.println("аргумент должен быть типом Position");
+                System.out.println("аргумент должен быть типом Position");
                 return false;
         }catch (EmptyCollection exception){
-            System.err.println("Коллекция пуста");
+            System.out.println("Коллекция пуста");
             return false;
         }
     }

@@ -23,6 +23,11 @@ public class UpdateCommand extends  AbstractCommand{
         this.creator=creator;
     }
 
+    /**
+     * Выполнение команды
+     * @param argument
+     * @return состояние выполнения команды
+     */
     @Override
     public boolean execute(String argument) {
         try{
@@ -38,16 +43,16 @@ public class UpdateCommand extends  AbstractCommand{
             }
             return true;
         }catch (IncorrectArgumentException exception){
-            System.err.println("Команда "+ getName() +" должна иметь параметр id");
+            System.out.println("Команда "+ getName() +" должна иметь параметр id");
             return false;
         }catch (NullPointerException exception){
-            System.err.println("Элемент с таким id не найден");
+            System.out.println("Элемент с таким id не найден");
             return false;
         }catch (NumberFormatException exception){
-            System.err.println("id должен быть целым числом");
+            System.out.println("id должен быть целым числом");
             return false;
         }catch (EmptyCollection exception){
-            System.err.println("Коллекция пуста");
+            System.out.println("Коллекция пуста");
             return false;
         }
     }

@@ -27,7 +27,7 @@ public class ExecuteScriptCommand extends AbstractCommand {
             if(argument.isEmpty()) throw new IncorrectArgumentException();
             return  true;
         } catch (IncorrectArgumentException exception){
-            System.err.println("Команда " + getName() + "должна имеет параметр");
+            System.out.println("Команда " + getName() + "должна имеет параметр");
             return false;
         }
     }
