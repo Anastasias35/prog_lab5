@@ -24,7 +24,10 @@ public class CollectionManager{
       }
 
 
-      public void loadCollection(){
+    /**
+     * Загрузка коллекции
+     */
+    public void loadCollection(){
           workerCollection=fileManager.readCollection();
           lastIntTime=LocalDateTime.now();
       }
@@ -97,10 +100,14 @@ public class CollectionManager{
      * @return
      */
     public Long nextId(){
+         Long maxId=0l;
          if (workerCollection.isEmpty()) return 1L;
          else{
-            return workerCollection.iterator().next().getId() + 1;
+           for(Worker worker1:workerCollection){
+                maxId=Math.max(worker1.getId(),maxId);
+           }
          }
+         return maxId+1;
     }
 
     /**
@@ -186,6 +193,9 @@ public class CollectionManager{
     }
 
 
+    /**
+     * Представление элемента в строковом формате
+     */
     public void stringCollection(){
         if (workerCollection.isEmpty()) {
             System.out.println("Коллекция пуста");

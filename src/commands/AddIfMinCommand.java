@@ -56,10 +56,10 @@ public class AddIfMinCommand extends AbstractCommand {
             }
             return true;
         }catch (IncorrectArgumentException exception){
-            System.err.println("Команда "+ getName() + " не должна иметь аргументы");
+            System.out.println("Команда "+ getName() + " не должна иметь аргументы");
             return false;
         }catch (EmptyCollection exception){
-            System.err.println("Коллекция пуста");
+            System.out.println("Коллекция пуста");
             return false;
         }
     }
