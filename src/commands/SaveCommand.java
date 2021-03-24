@@ -25,6 +25,7 @@ public class SaveCommand extends AbstractCommand {
     @Override
     public boolean execute(String argument){
         try{
+
             if(!argument.isEmpty()) throw new IncorrectArgumentException();
             collectionManager.saveCollection();
             return true;

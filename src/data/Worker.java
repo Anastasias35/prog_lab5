@@ -31,6 +31,10 @@ public class Worker  implements Comparable<Worker>{
         this.person=person;
     }
 
+    public Worker(){
+
+    }
+
     /**
      * @return id работника
      */
@@ -95,13 +99,52 @@ public class Worker  implements Comparable<Worker>{
         return person;
     }
 
+    public void setId(Long id){
+        this.id=id;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setCoordinates(Coordinates coordinates){
+        this.coordinates=coordinates;
+    }
+
+    public void setSalary(Long salary){
+        this.salary=salary;
+    }
+
+    public void setStartDate(LocalDateTime startDate){
+        this.startDate=startDate;
+    }
+
+    public void setEndDate(ZonedDateTime endDate){
+        this.endDate=endDate;
+    }
+
+    public void setPosition(Position position){
+        this.position=position;
+    }
+
+    public void setPerson(Person person){
+        this.person=person;
+    }
+
+    public void setCreationDate(Date creationDate){
+        this.creationDate=creationDate;
+    }
+
+
+    public String saveToCSV(){
+        return String.valueOf(id) + "," + name + ","+ String.valueOf(coordinates.coordinatesToCSV())+ "," + creationDate.toString() + "," + salary+","+ startDate+"," + endDate + "," + position+ "," + String.valueOf(person.personToCSV());
+    }
 
     @Override
     public String toString() {
-        return "Worker:" +
-                "id=" + id + "\n" +
+        return  "id=" + id + "\n" +
                 "name=" + name + '\n' +
-                "coordinates=" + coordinates + "\n" +
+                "coordinates=" + coordinates +
                 "creationDate=" + creationDate + "\n" +
                 "salary=" + salary + "\n" +
                 "startDate=" + startDate + "\n" +
@@ -125,6 +168,7 @@ public class Worker  implements Comparable<Worker>{
                 position == worker.position &&
                 Objects.equals(person, worker.person);
     }
+
 
     @Override
     public int hashCode() {

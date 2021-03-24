@@ -10,6 +10,10 @@ public class Person {
     private Color eyecolor;
     private Color haircolor;
     private Country nationality;
+
+    public Person(){
+    }
+
     public Person(double weight, Color eyecolor, Color haircolor, Country nationality){
         this.weight=weight;
         this.eyecolor=eyecolor;
@@ -45,10 +49,29 @@ public class Person {
         return nationality;
    }
 
+   public void setWeight(Double weight){
+       this.weight=weight;
+   }
+
+   public void setEyecolor(Color eyecolor){
+       this.eyecolor=eyecolor;
+   }
+
+   public void setHaircolor(Color haircolor){
+       this.haircolor=haircolor;
+   }
+
+   public void setNationality(Country nationality){
+       this.nationality=nationality;
+   }
+
+    public String personToCSV(){
+       return weight+ " " +eyecolor + " " + haircolor + " "+nationality;
+    }
+
     @Override
     public String toString() {
-        return "Person" +
-                "weight=" + weight + "\n"+
+        return "weight=" + weight + "\n"+
                 "eyecolor=" + eyecolor + "\n"+
                 "haircolor=" + haircolor + "\n"+
                 "nationality=" + nationality ;

@@ -1,6 +1,5 @@
 package utilitka;
 
-import exceptions.CanNotReadException;
 import exceptions.RecursionException;
 
 import java.io.File;
@@ -48,17 +47,11 @@ public class Console {
      * Выполнение скрипта
      * @param file
      */
-    public void actScript(String file){ //exit выполняется вне зависимости от содержания
-        System.out.println("file");
+    public void actScript(String file){
         String[] userCommand1={"",""};
         scriptName.add(file);
-        File file1=new File(file); //даже здесь срабатывает
-
+        File file1=new File(file);
         try(Scanner scanner1=new Scanner(file1)) {
-             if (!file1.canRead()) {
-                 System.out.println("Нет прав на чтение");
-                 System.exit(0);
-             }
              if (!scanner1.hasNext()) throw new NoSuchElementException();
              int commandStatus = 0;
              Scanner scanner = creator.getScanner();
@@ -75,10 +68,11 @@ public class Console {
                          }
                      }
                     commandStatus = choiceCommand(userCommand1);
-                    System.out.println(userCommand1[0]);
                  } while (scanner1.hasNextLine() && commandStatus != 2);
              creator.setScanner(scanner);
          }catch (FileNotFoundException exception) {
+             if(!file1.canRead() & file1.exists()) System.out.println("Нет прав на чтение файла");
+             else
              System.out.println("Файл с таким  именем не найден");
          }catch (NoSuchElementException exception){
              System.out.println("Файл пуст");

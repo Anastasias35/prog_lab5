@@ -13,12 +13,14 @@ import java.util.*;
 public class CollectionManager{
       private LinkedHashSet<Worker> workerCollection =new LinkedHashSet<>();
       private List<Worker> sortWorkerBySalary= new ArrayList<>();
+      private Creator creator;
 
       private LocalDateTime lastIntTime;
       private FileManager fileManager;
 
-      public CollectionManager(FileManager fileManager){
+      public CollectionManager(FileManager fileManager, Creator creator){
           this.fileManager=fileManager;
+          this.creator=creator;
           this.lastIntTime=null;
           loadCollection();
       }

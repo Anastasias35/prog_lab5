@@ -26,12 +26,13 @@ public class Coordinates {
     public Double getY(){
         return y;
     }
+    public String coordinatesToCSV(){
+        return String.valueOf(x) + " " + String.valueOf(y);
+    }
 
    @Override
     public String toString() {
-        return "Coordinates:" +
-                "x=" + x + "\n"+
-                "y=" + y + "\n" ;
+        return  "x=" + x + " " + "y=" + y + "\n" ;
     }
 
     @Override
