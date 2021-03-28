@@ -186,7 +186,7 @@ public class FileManager {
         }catch (NumberFormatException exception){
             System.out.println("Неверный формат данных");
         } catch(Exception exception){
-            System.out.println("Дурында,неверно");
+            System.out.println();
         }
         return new LinkedHashSet<>();
     }
